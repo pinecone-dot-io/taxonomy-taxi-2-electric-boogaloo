@@ -3,7 +3,7 @@ Contributors: postpostmodern
 Donate link: http://www.heifer.org/
 Tags: custom taxonomies, taxonomy
 Requires at least: 3.1.3
-Tested up to: 3.9
+Tested up to: 4.2.3
 Stable tag: trunk
 
 Allows browsing all posts of any taxonomy type.
@@ -17,6 +17,18 @@ Allows browsing all posts of any taxonomy type.
 1. Where you could previously only see posts in one term at a url like http://domain/taxonomy/slug/, you can now see all posts with any term within the taxonomy at http://domain/taxonomy/ and http://domain/taxonomy/page/2/ etc. 
 
 == Changelog ==
+= 0.6 =
+* Works with 4.2
+
+= 0.5 =
+* Start on fix for 4.2
+
+= 0.45 =
+* Fix undefined term_id when admin bar is showing
+
+= 0.4 =
+* Finish namespace refactor
+
 = 0.3 =
 * Start on namespace refactor
 
