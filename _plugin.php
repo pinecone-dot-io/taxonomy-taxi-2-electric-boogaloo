@@ -3,7 +3,7 @@
 Plugin Name:	Taxonomy Taxi 2 : Electric Boogaloo
 Plugin URI:		
 Description:	
-Version:		.6.1
+Version:		.5
 Author:			postpostmodern, pinecone-dot-io
 Author URI: 
 */
