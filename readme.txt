@@ -1,6 +1,6 @@
-=== Taxonomy Taxi Two Electric Boogaloo ===
-Contributors: postpostmodern
-Donate link: http://www.heifer.org/
+=== Taxonomy Taxi - 2 Taxonomy 2 Taxi ===
+Contributors: postpostmodern, pinecone-dot-io
+Donate link: https://cash.app/$EricEaglstun
 Tags: custom taxonomies, taxonomy
 Requires at least: 3.1.3
 Tested up to: 4.2.3
@@ -17,6 +17,10 @@ Allows browsing all posts of any taxonomy type.
 1. Where you could previously only see posts in one term at a url like http://domain/taxonomy/slug/, you can now see all posts with any term within the taxonomy at http://domain/taxonomy/ and http://domain/taxonomy/page/2/ etc. 
 
 == Changelog ==
+
+= 0.6.1 = 
+* No more boogaloo 
+
 = 0.6 =
 * Fix the quries using proper filtering
 

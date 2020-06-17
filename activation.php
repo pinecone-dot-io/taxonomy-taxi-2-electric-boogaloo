@@ -1,17 +1,19 @@
 <?php
 
-namespace taxonomytaxi\electric_boogaloo;
+namespace Taxonomy_Taxi\Two_Taxonomy_Two_Taxi;
 
-/*
-*	called on activation hook
-*/
-function activate(){
-	flush_rewrite_rules( FALSE );
+/**
+ * Called on activation hook
+ */
+function activate()
+{
+	flush_rewrite_rules(FALSE);
 }
 
-/*
-*	called on deactivation hook
-*/
-function deactivate(){
-	flush_rewrite_rules( FALSE );
+/**
+ * Called on deactivation hook
+ */
+function deactivate()
+{
+	flush_rewrite_rules(FALSE);
 }

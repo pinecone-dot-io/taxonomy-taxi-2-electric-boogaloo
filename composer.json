@@ -1,0 +1,14 @@
+{
+    "name": "pinecone-dot-website/taxonomy-taxi-two",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Eric Eaglstun",
+            "email": "postpostmodern@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    }
+}
