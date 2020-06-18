@@ -2,8 +2,8 @@
 Contributors: postpostmodern, pinecone-dot-io
 Donate link: https://cash.app/$EricEaglstun
 Tags: custom taxonomies, taxonomy
-Requires at least: 3.1.3
-Tested up to: 4.2.3
+Requires at least: 4.2.3
+Tested up to: 5.4.2
 Stable tag: trunk
 
 Allows browsing all posts of any taxonomy type.
