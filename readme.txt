@@ -18,8 +18,11 @@ Allows browsing all posts of any taxonomy type.
 
 == Changelog ==
 
-= 0.6.1 = 
+= 0.6.2 = 
 * No more boogaloo 
+
+= 0.6.1 = 
+* Who knows
 
 = 0.6 =
 * Fix the quries using proper filtering

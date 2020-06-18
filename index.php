@@ -6,22 +6,26 @@ require __DIR__ . '/activation.php';
 
 /**
  *
- * @param string
- * @param int|object
- * @param string
- * @param string
+ * @param $location string
+ * @param $term_id int|object
+ * @param $taxonomy string
+ * @param $object_type string
+ * 
+ * @return string
  */
 function get_edit_term_link($location, $term_id, $taxonomy, $object_type)
 {
-	if (!is_object($term_id) || $term_id->term_id != 0)
+	if (!is_object($term_id) || $term_id->term_id != 0) {
 		return $location;
+	}
 
 	$args = array(
 		'taxonomy' => $taxonomy,
 	);
 
-	if (trim($object_type))
+	if (trim($object_type)) {
 		$args['post_type'] = $object_type;
+	}
 
 	$location = add_query_arg($args, admin_url('edit-tags.php'));
 
@@ -31,22 +35,25 @@ add_filter('get_edit_term_link', __NAMESPACE__ . '\get_edit_term_link', 10, 4);
 
 /**
  *
- * @param string
+ * @param $query string
+ * 
  * @return string
  */
 function queried_taxonomy($query = NULL)
 {
 	static $queried_taxonomy = NULL;
 
-	if ($query)
+	if ($query) {
 		$queried_taxonomy = $query;
+	}
 
 	return $queried_taxonomy;
 }
 
 /**
  * 
- * @param WP_Query
+ * @param $wp_query WP_Query
+ * 
  * @return string	
  */
 function parse_query(&$wp_query)
@@ -64,13 +71,16 @@ add_filter('parse_query', __NAMESPACE__ . '\parse_query');
  */
 function posts_request($sql, $wp_query)
 {
-	//dbug( $sql );
+	// dump($sql);
 	return $sql;
 }
 add_filter('posts_request', __NAMESPACE__ . '\posts_request', 10, 2);
 
 /**
  *
+ * @param $wp_query WP_Query
+ * 
+ * @return WP_Query
  */
 function pre_get_posts($wp_query)
 {
@@ -100,9 +110,11 @@ function pre_get_posts($wp_query)
 add_filter('pre_get_posts', __NAMESPACE__ . '\pre_get_posts', 10, 1);
 
 /**
- * filter for `rewrite_rules_array` to add taxonomy base slugs directly before last catch alls
+ * Filter for `rewrite_rules_array` to add taxonomy base slugs directly before last catch alls
  * calls `{slug}_taxonomytaxi-two_rewrite_rules` filters
- * @param array
+ * 
+ * @param $r array
+ * 
  * @return array	
  */
 function rewrite_rules_array($r)
@@ -117,8 +129,9 @@ function rewrite_rules_array($r)
 	unset($taxonomies['post_format']);
 
 	foreach ($taxonomies as $taxonomy => $properties) {
-		if (!$properties->rewrite)
+		if (!$properties->rewrite){
 			continue;
+		}
 
 		$slug = $properties->rewrite['slug'];
 
@@ -137,9 +150,10 @@ function rewrite_rules_array($r)
 	$p = array_search('(.+?)/page/?([0-9]{1,})/?$', $k);
 
 	// @TODO figure out a better way of finding this
-	if (!$p)
+	if (!$p){
 		$p = array_search('page/?([0-9]{1,})/?$', $k);
-
+	}
+		
 	$a = array_slice($r, 0, $p);
 	$b = array_slice($r, $p);
 
